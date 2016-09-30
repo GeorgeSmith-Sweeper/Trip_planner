@@ -8,12 +8,10 @@ var Activity = models.Activity;
 var Promise = require('bluebird')
 
 exports.home = function(req, res, next) {
-  Hotel.findAll({})
-  .then(function(eachHotel){
-    var hotels = eachHotel.map(hotel => hotel.dataValues)
-    console.log('THESE ARE THE HOTELS', hotels)
-    res.render('home', { hotels: hotels });
-  })
+  Promise.all([Hotel.findAll(), Restaurant.findAll(), Activity.findAll()])
+.spread(function(hotels, restaurants, activities){
+  res.render('home', { hotels: hotels, restaurants: restaurants, activities: activities});
+})
   .catch(function(err){
     console.err
   })

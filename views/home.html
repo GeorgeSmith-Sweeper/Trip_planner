@@ -44,20 +44,34 @@
             </div>
           </div>
 
+
+
+
+
+
+
+          {% block content %}
           <div class="inner cover">
             <h1 class="cover-heading">Trip Planner.</h1>
             <select class="form-control">
               <option class="optionselect" value="" disabled selected>Choose a Hotel</option>
-              <option>1</option>
+              {% for hotel in hotels %}
+                <option>{{hotel.name}}</option>
+              {% endfor %}
             </select>
             <select class="form-control">
               <option class="optionselect" value="" disabled selected>.. a Restaurant</option>
-              <option>1</option>
+              {% for restaurant in restaurants %}
+                <option>{{restaurant.name}}</option>
+              {% endfor %}
             </select>
             <select class="form-control">
               <option class="optionselect" value="" disabled selected>.. and an Activity</option>
-              <option>1</option>
+              {% for activity in activities %}
+                <option>{{activity.name}}</option>
+              {% endfor %}
             </select>
+            {% endblock %}
             <p>
               <br>
               <a href="/dayplan" class="btn btn-lg btn-default">Create My Day</a>
