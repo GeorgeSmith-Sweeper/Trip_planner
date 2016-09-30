@@ -1,5 +1,5 @@
 var Sequelize = require('sequelize');
-var db = new Sequelize('postgres://localhost:3000/tripplanner');
+var db = new Sequelize('postgres://localhost:5432/tripplanner');
 
 var Place = db.define('place', {
   address: {
@@ -19,7 +19,7 @@ var Place = db.define('place', {
     allowNull: false
   },
   location: {
-    type: Sequelize.ARRAY(DataTypes.DOUBLE)
+    type: Sequelize.ARRAY(Sequelize.DOUBLE)
   }
 });
 
