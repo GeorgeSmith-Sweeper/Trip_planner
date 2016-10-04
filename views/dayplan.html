@@ -4,33 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
-
     <title>Day Plan</title>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
-
     <link href="/stylesheets/dayplan.css" rel="stylesheet">
-
   </head>
 
   <body>
 
-
-
     <div class="site-wrapper">
-<!--       <video autoplay loop poster="photo-3.jpg" id="embedded_video">
-         <source src="newyork.mp4" type="video/mp4">
-      </video> -->
       <div class="site-wrapper-inner">
-
         <div class="cover-container">
-
           <div class="masthead clearfix">
             <div class="inner">
               <h3 class="masthead-brand">TripPlanner</h3>
@@ -47,21 +33,20 @@
 
           <div class='parentDiv'>
             <div class="mapDiv">
-                <div id="map"></div>
-                  <script>
-
-                    function initMap() {
-                      var uluru = {lat: 40.705189, lng: -74.009209};
-                      var map = new google.maps.Map(document.getElementById('map'), {
-                        zoom: 12,
-                        center: uluru
-                      });
-                      var marker = new google.maps.Marker({
-                        position: uluru,
-                        map: map
-                      });
-                    }
-                  </script>
+              <div id="map"></div>
+                <script>
+                  function initMap() {
+                    var uluru = {lat: 40.705189, lng: -74.009209};
+                    var map = new google.maps.Map(document.getElementById('map'), {
+                      zoom: 12,
+                      center: uluru
+                    });
+                    var marker = new google.maps.Marker({
+                      position: uluru,
+                      map: map
+                    });
+                  }
+                </script>
             </div>
             <div class="searchDiv">
               <div class='hotelDiv'>
@@ -70,23 +55,17 @@
               <div class="dayDiv">
 
               </div>
-
             </div>
           </div>
-
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiLjjQLQj8x9huHr9crlVMouwwepWaVnw&callback=initMap"async defer>
-          </script>
-
         </div>
-
       </div>
-
     </div>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiLjjQLQj8x9huHr9crlVMouwwepWaVnw&callback=initMap"async defer></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/jquery/dist/.min.js"></script>
+
   </body>
 </html>

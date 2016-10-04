@@ -11,9 +11,9 @@ module.exports = router;
 
 router.get('/home', function(req, res, next) {
   Promise.all([Hotel.findAll(), Restaurant.findAll(), Activity.findAll()])
-.spread(function(hotels, restaurants, activities){
-  res.render('home', { hotels: hotels, restaurants: restaurants, activities: activities});
-})
+  .spread(function(hotels, restaurants, activities){
+    res.render('home', { hotels: hotels, restaurants: restaurants, activities: activities});
+  })
   .catch(function(err){
     console.log(err);
   })
